@@ -34,6 +34,7 @@ const app = express();
 app.get("/healthcheck", (req: any, res: any) => {
   res.json({"msg": "hi"});
 })
+
 app.use('/graphql', graphqlHTTP({
   schema: schema,
   rootValue: root,
